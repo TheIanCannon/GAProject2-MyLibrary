@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>My Library</title>
+</head>
+
+<body>
+    <nav>
+        <a href="/">Home</a>&nbsp;|&nbsp;
+        <a href="/">Browse Books</a>&nbsp;|&nbsp;
+        <% if (user) { %>
+            <a href="/">Add a Book</a>&nbsp;|&nbsp;
+            <a href="/">Your Bookshelf</a>&nbsp;|&nbsp;
+            <a href="/">Sign Out</a>&nbsp;|&nbsp;
+            <% } else { %>
+                <a href="/auth/google" class="login">Sign In&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>&nbsp;|&nbsp;
+                <% } %>
+    </nav>

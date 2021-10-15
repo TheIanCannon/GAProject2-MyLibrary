@@ -1,11 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<%- include('./partials/header') %>
+
+    <nav>
+        <a href="/">HOME</a>&nbsp;|&nbsp;
+        <a href="/">Browse Books</a>&nbsp;|&nbsp;
+        <a href="/">Add a Book</a>&nbsp;|&nbsp;
+        <a href="/">Your Bookshelf</a>&nbsp;|&nbsp;
+        <a href="/">Log In</a>&nbsp;|&nbsp;
+        <a href="/">Log Out</a>
+    </nav>
+
+    <h1>Welcome to the Library</h1>
+    <h2>"The Next Best Thing to Alexandria"</h2>
+
+    <%- include('./partials/footer') %>
