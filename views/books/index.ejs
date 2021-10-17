@@ -1,33 +1,37 @@
 <%- include('../partials/header') %>
-    <table id="list">
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Genre</th>
-                <th>Publishing<br>Date</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <% books.forEach(function(b) { %>
+    <% if (books.length > 0) { %>
+        <table id="list">
+            <thead>
                 <tr>
-                    <td>
-                        <%= b.title %>
-                    </td>
-                    <td>
-                        <%= b.author %>
-                    </td>
-                    <td>
-                        <%= b.genre %>
-                    </td>
-                    <td>
-                        <%= b.pubDate %>
-                    </td>
-                    <td><a href="/books/<%= b._id %>">Details</a></td>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Genre</th>
+                    <th>Publishing<br>Date</th>
+                    <th></th>
                 </tr>
-                <% }); %>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                <% books.forEach(function(b) { %>
+                    <tr>
+                        <td>
+                            <%= b.title %>
+                        </td>
+                        <td>
+                            <%= b.author %>
+                        </td>
+                        <td>
+                            <%= b.genre %>
+                        </td>
+                        <td>
+                            <%= b.pubDate %>
+                        </td>
+                        <td><a href="/books/<%= b._id %>">Details</a></td>
+                    </tr>
+                    <%})%>
+            </tbody>
+        </table>
+        <% } else {%>
+            <h1>No Books in Database</h1>
+            <% } %>
 
-    <%- include('../partials/footer') %>
+                <%- include('../partials/footer') %>

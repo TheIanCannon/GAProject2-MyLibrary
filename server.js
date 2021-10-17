@@ -3,17 +3,21 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+
+// CONST YOUR SESSION, PASSPORT, and OVERRIDE
 const session = require('express-session');
 const passport = require('passport');
 const methodOverride = require("method-override");
 
+// REQUIRE DOTENV, Config/Db, and Config/Passport
 require('dotenv').config();
-// connect to our database
 require('./config/database');
 require('./config/passport');
 
-var indexRouter = require('./routes/index');
-// ADD YOUR OTHER ROUTES HERE
+// ADD ROUTES HERE; DOUBLE-CHECK APP.USE OF ROUTES BELOW
+const indexRouter = require('./routes/index');
+const booksRouter = require('./routes/books');
+const reviewsRouter = require('./routes/reviews');
 
 var app = express();
 
@@ -44,8 +48,11 @@ app.use(function(req, res, next) {
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
+// ADD USE ROUTES HERE
 app.use('/', indexRouter);
-// ADD OTHER USE ROUTES HERE
+app.use('/books', booksRouter);
+app.use('/', reviewsRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
