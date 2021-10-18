@@ -4,7 +4,7 @@
         <table id="shelf-list">
             <thead>
                 <tr>
-                    <th>Shelf</th>
+                    <th>Shelf&nbsp|&nbsp</th>
                     <th>Notes</th>
                     <th></th>
                 </tr>
@@ -13,8 +13,9 @@
                 <% shelves.forEach(function(s) { %>
                     <tr>
                         <td>
-                            <%= s.name %>
+                            <%= s.name %>&nbsp|&nbsp
                         </td>
+
                         <td>
                             <%= s.notes %>
                         </td>
