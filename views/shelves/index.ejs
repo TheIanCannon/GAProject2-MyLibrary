@@ -18,6 +18,11 @@
                         <td>
                             <%= s.notes %>
                         </td>
+                        <td>
+                            <form action="/shelves/<%= s._id %>?_method=DELETE" method="POST">
+                                <button type="submit">X</button>
+                            </form>
+                        </td>
                     </tr>
 
                     <%})%>
