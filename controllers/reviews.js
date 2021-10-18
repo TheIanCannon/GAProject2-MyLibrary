@@ -18,7 +18,6 @@ function create(req, res) {
 }
 
 function deleteReview(req, res) {
-
     Book.findOne({ 'reviews._id': req.params.id, 'reviews.userId': req.user._id },
         function(err, book) {
             if (!book || err) return res.redirect(`/books/${book._id}`);

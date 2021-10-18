@@ -1,0 +1,36 @@
+<%- include('../partials/header') %>
+
+    <% if (shelves.length > 0) { %>
+        <table id="shelf-list">
+            <thead>
+                <tr>
+                    <th>Shelf</th>
+                    <th>Notes</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% shelves.forEach(function(s) { %>
+                    <tr>
+                        <td>
+                            <%= s.name %>
+                        </td>
+                        <td>
+                            <%= s.notes %>
+                        </td>
+                    </tr>
+                    <%})%>
+            </tbody>
+        </table>
+        <% } else {%>
+            <h1>No Shelves Available Yet</h1>
+            <form id="add-shelf-form" action="/shelves" method="POST">
+                <label>Shelf</label>
+                <input name="shelf">
+                <label>Notes</label>
+                <input name="notes">
+                <button type="submit">Add Shelf</button>
+            </form>
+            <% } %>
+
+                <%- include('../partials/footer') %>

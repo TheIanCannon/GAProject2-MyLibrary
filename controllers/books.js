@@ -14,7 +14,7 @@ function index(req, res) {
 }
 
 function newBook(req, res) {
-    res.render('books/new', { title: "New Book" })
+    res.render('books/new', { title: 'New Book' })
 }
 
 function create(req, res) {
