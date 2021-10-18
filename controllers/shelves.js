@@ -12,10 +12,11 @@ function index(req, res) {
 }
 
 function create(req, res) {
-    Shelf.findById(req.params.id, function(err, shelf) {
-        shelf.shelves.push(req.body);
-        shelf.save(function(err) {
-            res.redirect(`/shelves/${req.params.id}`);
-        });
+    console.log("Hi!");
+    const shelf = new Shelf(req.body);
+    shelf.save(function(err) {
+        console.log(err);
+        if (err) return res.redirect('/shelves');
+        res.redirect(`/shelves`);
     });
 }
