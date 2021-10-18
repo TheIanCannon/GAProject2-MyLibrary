@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const shelfSchema = new Schema({
     name: { type: String, required: true },
-    books: [books],
+    comments: { type: String }
 }, {
     timestamps: true
 });
