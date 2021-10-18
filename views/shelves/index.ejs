@@ -27,6 +27,13 @@
 
                     <%})%>
             </tbody>
+            <form id="add-shelf-form" action="/shelves" method="POST">
+                <label>Shelf</label>
+                <input name="name">
+                <label>Notes</label>
+                <input name="notes">
+                <button type="submit">Add Shelf</button>
+            </form>
         </table>
         <% } else {%>
             <h1>No Shelves Available Yet</h1>
