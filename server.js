@@ -8,6 +8,7 @@ var logger = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
 const methodOverride = require("method-override");
+const isLoggedIn = require('../config/auth');
 
 // REQUIRE DOTENV, Config/Db, and Config/Passport
 require('dotenv').config();
@@ -52,8 +53,8 @@ app.use(methodOverride('_method'));
 // ADD USE ROUTES HERE
 app.use('/', indexRouter);
 app.use('/books', booksRouter);
-app.use('/', reviewsRouter);
-app.use('/shelves', shelvesRouter);
+app.use('/', isLoggedIn, reviewsRouter);
+app.use('/shelves', isLoggedIn, shelvesRouter);
 
 
 // catch 404 and forward to error handler
