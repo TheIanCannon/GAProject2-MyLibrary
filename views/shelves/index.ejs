@@ -28,6 +28,13 @@
                             <%= s.notes %>
                         </td>
                         <td>
+                            <form id="add-book" action="/shelves/<%= s._id%>" method="POST">
+
+                                <input name="title" value="Search for a Book">
+                                <button type="submit">Add Title</button>
+                            </form>
+                        </td>
+                        <td>
                             <% s.books.forEach(function(book){ %>
                                 <a href="/books/<%= book._id %>">
                                     <%= book.title %>
@@ -36,13 +43,6 @@
                                     <button type="submit" onclick="return confirm('Remove book?');">X</button>
                                 </form>
                                 <%})%>
-                        </td>
-                        <td>
-                            <form id="add-book" action="/shelves/<%= s._id%>" method="POST">
-
-                                <input name="title" value="Search for a Book">
-                                <button type="submit">Add Title</button>
-                            </form>
                         </td>
                     </tr>
 
@@ -57,7 +57,6 @@
             </form>
         </table>
         <% } else {%>
-            <h1>No Shelves Available Yet</h1>
             <form id="add-shelf-form" action="/shelves" method="POST">
                 <label>Shelf</label>
                 <input name="name">
@@ -65,6 +64,7 @@
                 <input name="notes">
                 <button type="submit">Add Shelf</button>
             </form>
+            <h2>No Shelves Available Yet</h2>
             <% } %>
 
                 <%- include('../partials/footer') %>

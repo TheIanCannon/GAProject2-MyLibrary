@@ -6,6 +6,7 @@ module.exports = {
     create,
     delete: deleteShelf,
     addTitle,
+    removeTitle,
 };
 
 function index(req, res) {
@@ -39,6 +40,15 @@ function addTitle(req, res) {
             shelf.save(function(err) {
                 res.redirect(`/shelves`);
             });
+        });
+    });
+}
+
+function removeTitle(req, res) {
+    Shelf.findById(req.params.id, function(err, shelf) {
+        books.findByIdAndDelete(req.body, function(err, book) {
+            console.log(book._id);
+            res.redirect(`/shelves`);
         });
     });
 }
