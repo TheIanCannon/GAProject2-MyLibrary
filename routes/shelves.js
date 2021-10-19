@@ -1,12 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const shelvesCtrl = require('../controllers/shelves');
+const isLoggedIn = require('../config/auth');
 
 // ALL ROUTES HERE START WITH "SHELVES"
-router.get('/', shelvesCtrl.index);
-router.post('/', shelvesCtrl.create);
-router.delete('/:id', shelvesCtrl.delete);
-router.post('/:id', shelvesCtrl.addTitle);
-router.delete('/:shelfid/books/:titleid', shelvesCtrl.removeTitle);
+router.get('/', isLoggedIn, shelvesCtrl.index);
+router.post('/', isLoggedIn, shelvesCtrl.create);
+router.delete('/:id', isLoggedIn, shelvesCtrl.delete);
+router.post('/:id', isLoggedIn, shelvesCtrl.addTitle);
+router.delete('/:shelfid/books/:titleid', isLoggedIn, shelvesCtrl.removeTitle);
 
 module.exports = router;
