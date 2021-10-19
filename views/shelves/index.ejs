@@ -4,6 +4,7 @@
         <table id="shelf-list">
             <thead>
                 <tr>
+                    <th></th>
                     <th>Shelf&nbsp|&nbsp</th>
                     <th>Notes</th>
                     <th></th>
@@ -15,6 +16,11 @@
                 <% shelves.forEach(function(s) { %>
                     <tr>
                         <td>
+                            <form id="remove-shelf" action="/shelves/<%=s ._id %>?_method=DELETE" method="POST">
+                                <button type="submit" onclick="return confirm('Are you sure you want to delete this shelf?');">X</button>
+                            </form>
+                        </td>
+                        <td>
                             <%= s.name %>&nbsp|&nbsp
                         </td>
 
@@ -22,37 +28,42 @@
                             <%= s.notes %>
                         </td>
                         <td>
-                            <form action="/shelves/<%= s._id %>?_method=DELETE" method="POST">
-                                <button type="submit" onclick="return confirm('Are you sure you want to delete this shelf?');">X</button>
-                            </form>
+                            <% s.books.forEach(function(book){ %>
+                                <a href="/books/<%= book._id %>">
+                                    <%= book.title %>
+                                </a>
+                                <form id="remove-book" action="/shelves/<%=s ._id %>/books/<%= book._id %>?_method=DELETE" method="POST">
+                                    <button type="submit" onclick="return confirm('Remove book?');">X</button>
+                                </form>
+                                <%})%>
                         </td>
                         <td>
-                            <form id="add-book-form" action="/shelves/<%= s._id%>" method=POST ">
-<label>Title</label>
-<input name="title ">
-<button type="submit ">Add Title</button>
-                                </form>
-                            </td>
-                                        </tr>
+                            <form id="add-book" action="/shelves/<%= s._id%>" method="POST">
+
+                                <input name="title" value="Search for a Book">
+                                <button type="submit">Add Title</button>
+                            </form>
+                        </td>
+                    </tr>
 
                     <%})%>
             </tbody>
-            <form id="add-shelf-form " action="/shelves " method="POST ">
-                <label>Shelf</label>
-                <input name="name ">
-                <label>Notes</label>
-                <input name="notes ">
+            <form id="add-shelf" action="/shelves" method="POST">
+                <label>Shelf&nbsp</label>
+                <input name="name">
+                <label>&nbspNotes&nbsp</label>
+                <input name="notes">
                 <button type="submit ">Add Shelf</button>
             </form>
         </table>
         <% } else {%>
             <h1>No Shelves Available Yet</h1>
-            <form id="add-shelf-form " action="/shelves " method="POST ">
+            <form id="add-shelf-form" action="/shelves" method="POST">
                 <label>Shelf</label>
-                <input name="name ">
+                <input name="name">
                 <label>Notes</label>
-                <input name="notes ">
-                <button type="submit ">Add Shelf</button>
+                <input name="notes">
+                <button type="submit">Add Shelf</button>
             </form>
             <% } %>
 

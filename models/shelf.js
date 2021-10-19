@@ -3,7 +3,11 @@ const Schema = mongoose.Schema;
 
 const shelfSchema = new Schema({
     name: { type: String, required: true },
-    notes: { type: String }
+    notes: { type: String },
+    books: [{
+        type: Schema.Types.ObjectId,
+        ref: "Book",
+    }]
 }, {
     timestamps: true
 });
