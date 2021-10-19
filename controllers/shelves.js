@@ -10,14 +10,14 @@ module.exports = {
 };
 
 function index(req, res) {
-    Shelf.find({}).populate("books").exec(function(err, shelves) {
+    Shelf.find({ user: req.user._id }).populate("books").exec(function(err, shelves) {
         res.render('shelves/index', { title: 'Your Library', shelves });
     });
 }
 
 function create(req, res) {
     const shelf = new Shelf(req.body);
-    console.log(shelf);
+    shelf.user = req.user._id;
     shelf.save(function(err) {
         console.log(err);
         if (err) return res.redirect('/shelves');
@@ -45,9 +45,9 @@ function addTitle(req, res) {
 }
 
 function removeTitle(req, res) {
-    Shelf.findById(req.params.id, function(err, shelf) {
-        books.findByIdAndDelete(req.body, function(err, book) {
-            console.log(book._id);
+    Shelf.findById(req.params.shelfid, function(err, shelf) {
+        shelf.books.remove(req.params.titleid);
+        shelf.save(function(err) {
             res.redirect(`/shelves`);
         });
     });

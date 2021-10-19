@@ -5,6 +5,7 @@ module.exports = {
     new: newBook,
     create,
     show,
+    edit,
 };
 
 function index(req, res) {
@@ -36,4 +37,9 @@ function show(req, res) {
             book,
         });
     });
+}
+
+function edit(req, res) {
+    const book = Book.getOne(req.params.id);
+    res.render('books/edit', { todo });
 }

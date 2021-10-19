@@ -7,5 +7,6 @@ router.get('/', booksCtrl.index);
 router.get('/new', booksCtrl.new);
 router.post('/', booksCtrl.create);
 router.get('/:id', booksCtrl.show);
+router.get('/:id/edit', booksCtrl.edit);
 
 module.exports = router;
