@@ -4,6 +4,7 @@ module.exports = {
     index,
     create,
     delete: deleteShelf,
+    create: addTitle,
 };
 
 function index(req, res) {
@@ -13,7 +14,6 @@ function index(req, res) {
 }
 
 function create(req, res) {
-    console.log("Hi!");
     const shelf = new Shelf(req.body);
     shelf.save(function(err) {
         console.log(err);
@@ -28,12 +28,10 @@ function deleteShelf(req, res) {
     });
 }
 
-// function deleteShelf(req, res) {
-//   Shelf.findOne({ 'shelves._id': req.params.id }, function(err, shelves) {
-//        const shelfSubdoc = shelf.shelves.id(req.params.id);
-//        shelfSubdoc.remove();
-//        shelf.save(function(err) {
-//            res.redirect(`shelves/index`);
-//        });
-//    });
-//}
+function addTitle(req, res) {
+    const book = book.title(req.params.id, "title");
+    Shelf.findById(req.params.id, function(err, book) {
+        Shelf.push('books/:_id');
+        res.redirect('/shelves/:_id');
+    });
+}
