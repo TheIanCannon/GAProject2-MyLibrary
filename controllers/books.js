@@ -6,6 +6,7 @@ module.exports = {
     create,
     show,
     edit,
+    update,
 };
 
 function index(req, res) {
@@ -40,6 +41,14 @@ function show(req, res) {
 }
 
 function edit(req, res) {
-    const book = Book.getOne(req.params.id);
-    res.render('books/edit', { todo });
+    Book.findById(req.params.id, function(err, book) {
+        res.render('books/edit', { book });
+    });
+}
+
+function update(req, res) {
+    Book.findOneAndUpdate({ _id: req.params.id }, req.body, function(err, book) {
+        if (err || !book) return res.redirect('/books');
+        res.redirect(`/books/${req.params.id}`)
+    });
 }

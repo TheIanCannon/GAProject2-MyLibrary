@@ -2,13 +2,13 @@
 
     <h2>Edit Book</h2>
 
-    <form action="/books/<%= book.id %>?_method=PUT" method="POST">
+    <form action="/books/<%= book._id %>?_method=PUT" method="POST">
         <label>Title:</label>
-        <input type="text" name="title">
+        <input type="text" name="title" required=true value="<%= book.title %>">
         <label>Author(s):</label>
-        <input type="text" name="author">
+        <input type="text" name="author" required=true value="<%= book.author %>">
         <label>Genre</label>
-        <select name="genre">
+        <select name="genre" required=true value="<%= book.genre %>">
     <option value="Fantasy">Fantasy</option>
     <option value="Horror">Horror</option>
     <option value="Humor">Humor</option>
@@ -18,7 +18,7 @@
     <option value="Speculative Fiction">Speculative Fiction</option>
 						  </select>
         <label for="pubDate">Publishing Date:
-            <input type="date" name="pubDate">
+            <input type="date" name="pubDate" required=true value="<%= book._id.pubDate %>">
         </label>
         <button type="submit">Update Book</button>
     </form>
