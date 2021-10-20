@@ -2,12 +2,12 @@
     <h2>Books Available</h2>
     <% if (books.length > 0) { %>
         <table id="book-list">
-            <thead>
+            <thead id="book-list-header">
                 <tr>
                     <th>Title</th>
                     <th>Author</th>
                     <th>Genre</th>
-                    <th>Publishing<br>Date</th>
+                    <th>Publishing Date</th>
                     <th></th>
                 </tr>
             </thead>
@@ -15,13 +15,13 @@
                 <% books.forEach(function(b) { %>
                     <tr>
                         <td>
-                            <%= b.title %>
+                            <%= b.title %>&nbsp;&nbsp;&nbsp;
                         </td>
                         <td>
-                            <%= b.author %>
+                            <%= b.author %>&nbsp;&nbsp;&nbsp;
                         </td>
                         <td>
-                            <%= b.genre %>
+                            <%= b.genre %>&nbsp;&nbsp;&nbsp;
                         </td>
                         <td>
                             <%= b.pubDate %>

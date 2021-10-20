@@ -13,8 +13,10 @@ router.get(
     '/auth/google',
     passport.authenticate(
         'google', //which strategy we're using (google oauth)
-        { scope: ['profile', 'email'] } // scope of authentication; profile *and* EMAIL is needed
+        { scope: ['profile', 'email'], prompt: "select_account" } // scope of authentication; profile *and* EMAIL is needed
     ));
+
+
 
 // Google Oauth callback route
 router.get('/oauth2callback', passport.authenticate(
