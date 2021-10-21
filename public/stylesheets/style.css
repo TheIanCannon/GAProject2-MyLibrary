@@ -25,7 +25,7 @@ body>nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 150px;
+    width: 100px;
     height: 100%;
     background: rgb(255, 255, 255);
     display: flex;
@@ -37,6 +37,7 @@ body>nav>div {
     display: grid;
     justify-items: center;
     margin-top: 10px;
+    text-align: center;
 }
 
 .icon img {
@@ -70,7 +71,7 @@ body>nav>div {
 }
 
 #headshot {
-    border-radius: 50%;
+    border-radius: 10%;
 }
 
 nav>img {
@@ -79,5 +80,7 @@ nav>img {
 }
 
 main {
-    margin-left: 150px;
+    margin-left: 100px;
 }
+
+@media only screen and ( max-width: 768px) {}

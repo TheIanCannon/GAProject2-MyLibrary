@@ -24,11 +24,9 @@
         <table>
             <thead>
                 <tr>
-                    <th>User</th>
-                    <th>Date</th>
+                    <th>User/Date</th>
                     <th>Review</th>
                     <th>Rating</th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -40,9 +38,8 @@
                                     <img src="<%= r.userAvatar %>" id="headshot" alt="avatar">
                                     <br>
                                     <%= r.userName %>&nbsp;&nbsp;&nbsp;
-                                </td>
-                                <td>
-                                    <%= r.createdAt.toLocaleDateString() %>&nbsp;&nbsp;&nbsp;
+                                        <br>
+                                        <%= r.createdAt.toLocaleDateString() %>&nbsp;&nbsp;&nbsp;
                                 </td>
                                 <td>
                                     <%= r.content %>&nbsp;&nbsp;&nbsp;
