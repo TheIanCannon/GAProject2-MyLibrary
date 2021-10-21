@@ -20,13 +20,10 @@ function newBook(req, res) {
 }
 
 function create(req, res) {
-    for (let key in req.body) {
-        if (req.body[key] === '') delete req.body[key];
-    }
+    req.body.user = req.user._id;
     const book = new Book(req.body);
     book.save(function(err) {
         if (err) return res.redirect('/books/new');
-        console.log(book);
         res.redirect(`/books/`);
     });
 }
@@ -48,6 +45,7 @@ function edit(req, res) {
 
 function update(req, res) {
     Book.findOneAndUpdate({ _id: req.params.id }, req.body, function(err, book) {
+        if (!book.user.equals(req.user._id)) return res.redirect(`/books/${book._id}`);
         if (err || !book) return res.redirect('/books');
         res.redirect(`/books/${req.params.id}`)
     });

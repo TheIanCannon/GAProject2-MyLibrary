@@ -10,17 +10,6 @@ a {
     font-weight: bold;
 }
 
-.login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 34px;
-}
-
-.login img {
-    height: 30px;
-}
-
 body>nav {
     position: fixed;
     top: 0;
@@ -42,12 +31,33 @@ body>nav>div {
     text-align: center;
 }
 
+nav>img {
+    width: 34px;
+    object-fit: contain;
+}
+
+main {
+    margin-left: 100px;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 34px;
+}
+
+.login img {
+    height: 30px;
+}
+
 .icon img {
     height: 50px;
     width: 50px;
 }
 
-#edit-book {
+#edit-book,
+#list-title {
     color: lightgrey;
 }
 
@@ -76,15 +86,6 @@ body>nav>div {
     border-radius: 10%;
 }
 
-nav>img {
-    width: 34px;
-    object-fit: contain;
-}
-
-main {
-    margin-left: 100px;
-}
-
 #landing-page {
     margin-top: 85px;
     display: flex;
@@ -97,4 +98,4 @@ main {
     height: 370px;
 }
 
-@media only screen and ( max-width: 640px) {}
+@media only screen and ( max-width: 768px) {}

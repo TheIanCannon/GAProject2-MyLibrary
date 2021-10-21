@@ -16,6 +16,7 @@ const bookSchema = new Schema({
     author: { type: String, required: true },
     genre: { type: String },
     pubDate: { type: Date },
+    user: { type: Schema.Types.ObjectId, ref: 'User' },
     reviews: [reviewSchema],
 }, {
     timestamps: true
