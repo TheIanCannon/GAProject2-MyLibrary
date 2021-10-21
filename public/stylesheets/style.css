@@ -1,10 +1,11 @@
 body {
     padding: 50px;
-    font: 14px "Noto Sans";
+    font: 14px sans-serif;
 }
 
 a {
-    color: #2a3199;
+    color: #2e2694;
+    font-weight: bold;
 }
 
 .login {
@@ -22,9 +23,9 @@ body>nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100px;
+    width: 150px;
     height: 100%;
-    background: wheat;
+    background: rgb(210, 170, 130);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,8 +33,29 @@ body>nav {
     justify-content: center;
 }
 
+body>nav>div {
+    display: grid;
+    justify-items: center;
+    margin-top: 10px;
+}
+
+#new-book-form {
+    display: grid;
+    grid-template-rows: 5;
+    justify-content: left;
+}
+
 #book-list-header {
     text-decoration: underline;
+}
+
+#pubdate {
+    display: grid;
+    justify-content: stretch;
+}
+
+#shelf-list {
+    display: flex;
 }
 
 nav>img {
@@ -42,6 +64,5 @@ nav>img {
 }
 
 main {
-    margin-left: 100px;
-    padding: 10px;
+    margin-left: 150px;
 }

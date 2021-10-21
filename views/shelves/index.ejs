@@ -5,12 +5,15 @@
             <thead>
                 <tr>
                     <th></th>
-                    <th>Shelf&nbsp|&nbsp</th>
+                    <th>Shelf</th>
+                    <th>|</th>
                     <th>Notes</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
+                    <th>|</th>
+                    <th>Titles</th>
                 </tr>
+                <br>
+                <tr></tr>
+
             </thead>
             <tbody>
                 <% shelves.forEach(function(s) { %>
@@ -21,19 +24,13 @@
                             </form>
                         </td>
                         <td>
-                            <%= s.name %>&nbsp|&nbsp
+                            <%= s.name %>
                         </td>
-
+                        <td>|</td>
                         <td>
                             <%= s.notes %>
                         </td>
-                        <td>
-                            <form id="add-book" action="/shelves/<%= s._id%>" method="POST">
-
-                                <input name="title" value="Search for a Book">
-                                <button type="submit">Add Title</button>
-                            </form>
-                        </td>
+                        <td>|</td>
                         <td>
                             <% s.books.forEach(function(book){ %>
                                 <a href="/books/<%= book._id %>">
@@ -44,19 +41,28 @@
                                 </form>
                                 <%})%>
                         </td>
-                    </tr>
+                        <td>
+                            <form id="add-book" action="/shelves/<%= s._id%>" method="POST">
 
+                                <input name="title" value="Search for a Book">
+                                <button type="submit">Add Title</button>
+                            </form>
+                        </td>
+
+                    </tr>
                     <%})%>
             </tbody>
-            <form id="add-shelf" action="/shelves" method="POST">
-                <label>Shelf&nbsp</label>
-                <input name="name">
-                <label>&nbspNotes&nbsp</label>
-                <input name="notes">
-                <button type="submit ">Add Shelf</button>
-            </form>
         </table>
+        <br>
+        <form id="add-shelf" action="/shelves" method="POST">
+            <label>Shelf&nbsp</label>
+            <input name="name">
+            <label>&nbspNotes&nbsp</label>
+            <input name="notes">
+            <button type="submit ">Add Shelf</button>
+        </form>
         <% } else {%>
+            <h2>No Shelves Available Yet</h2>
             <form id="add-shelf-form" action="/shelves" method="POST">
                 <label>Shelf</label>
                 <input name="name">
@@ -64,7 +70,7 @@
                 <input name="notes">
                 <button type="submit">Add Shelf</button>
             </form>
-            <h2>No Shelves Available Yet</h2>
+
             <% } %>
 
                 <%- include('../partials/footer') %>

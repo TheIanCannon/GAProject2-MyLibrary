@@ -2,10 +2,10 @@
 
     <h2>Add a Book</h2>
     <form id="new-book-form" action="/books" method="POST">
-        <label>Title:</label>
-        <input type="text" name="title">
-        <label>Author:</label>
-        <input type="text" name="author">
+        <label>Title</label>
+        <input type="text" name="title"><br>&nbsp;<br>
+        <label>Author</label>
+        <input type="text" name="author"><br>&nbsp;<br>
         <label>Genre</label>
         <select name="genre">
     <option value="Fantasy">Fantasy</option>
@@ -15,10 +15,10 @@
 				<option value="Non-Fiction">Non-Fiction</option>
 				<option value="Reference">Reference</option>
     <option value="Speculative Fiction">Speculative Fiction</option>
-						  </select>
-        <label for="pubDate">Publishing Date:
+						  </select><br>&nbsp;<br>
+        <label id="pubdate" for="pubDate">Publishing Date<br>
             <input type="date" name="pubDate">
-        </label>
+        </label><br>&nbsp;<br>
         <input type="submit" value="Add Book">
     </form>
 

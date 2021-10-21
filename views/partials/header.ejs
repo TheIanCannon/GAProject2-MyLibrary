@@ -12,14 +12,38 @@
 
 <body>
     <nav>
-        <a href="/">Home</a><br>
-        <a href="/books"><img src="https://i.imgur.com/gPGgPm3.png" height=30 width=30><br>Browse Books</a><br>
+        <div id="head-a">
+            <a href="/"><img src="https://i.imgur.com/KdYWfeA.png" height=30 width=30></a>
+            <br>
+            <a href="/">Home</a>
+        </div>
+        <div id="head-b">
+            <a href="/books"><img src="https://i.imgur.com/lcUT2qM.png" height=30 width=30></a>
+            <br>
+            <a href="/books">Browse Books</a>
+        </div>
         <% if (user) { %>
-            <a href="/books/new"><img src="https://i.imgur.com/W6TDO6C.png" height=30 width=30><br>Add a Book</a><br>
-            <a href="/shelves"><img src="https://i.imgur.com/MZGXWKj.png" height=30 width=30><br>Your Collection</a><br>
-            <a id="sign-out" href="/logout"><img src="https://i.imgur.com/FHjYyi0.png" height=30 width=30><br>Sign Out</a><br>
+            <div id="head-c">
+                <a href="/books/new"><img src="https://i.imgur.com/0yZNN93.png" height=30 width=30></a>
+                <br>
+                <a href="/books/new">Add a Book</a>
+            </div>
+            <div id="head-d">
+                <a href="/shelves"><img src="https://i.imgur.com/iKe3Pjv.png" height=30 width=30></a>
+                <br>
+                <a href="/shelves">Your Collection</a>
+            </div>
+            <div id="head-e">
+                <a href="/logout"><img src="https://i.imgur.com/FHjYyi0.png" height=30 width=30></a>
+                <br>
+                <a href="/logout">Sign Out</a>
+            </div>
             <% } else { %>
-                <a id="sign-in" href="/auth/google" class="login"><img src="https://i.imgur.com/FHjYyi0.png" height=30 width=30><br>Sign In</a><br>
+                <div id="head-f">
+                    <a href="/auth/google"><img src="https://i.imgur.com/FHjYyi0.png" height=30 width=30></a>
+                    <br>
+                    <a href="/auth/google">Sign In</a>
+                </div>
                 <% } %>
     </nav>
     <main>

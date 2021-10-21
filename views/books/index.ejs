@@ -6,8 +6,6 @@
                 <tr>
                     <th>Title</th>
                     <th>Author</th>
-                    <th>Genre</th>
-                    <th>Publishing Date</th>
                     <th></th>
                 </tr>
             </thead>
@@ -21,12 +19,8 @@
                             <%= b.author %>&nbsp;&nbsp;&nbsp;
                         </td>
                         <td>
-                            <%= b.genre %>&nbsp;&nbsp;&nbsp;
+                            <a href="/books/<%= b._id %>"><img src="https://i.imgur.com/5CPYOKN.png" height=30 width=30></a>
                         </td>
-                        <td>
-                            <%= b.pubDate %>
-                        </td>
-                        <td><a href="/books/<%= b._id %>">Details</a></td>
                     </tr>
                     <%})%>
             </tbody>
