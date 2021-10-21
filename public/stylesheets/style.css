@@ -25,8 +25,8 @@ body>nav {
 body>nav>div {
     display: grid;
     justify-items: center;
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 1vh;
+    padding: 0.5vh;
     justify-content: center;
     text-align: center;
 }
@@ -84,6 +84,7 @@ main {
 
 #headshot {
     border-radius: 10%;
+    border-width: 3px;
 }
 
 #landing-page {
@@ -94,8 +95,8 @@ main {
 }
 
 #landing-book {
-    width: 520px;
-    height: 370px;
+    width: 480px;
+    height: 360px;
 }
 
 @media only screen and ( max-width: 768px) {}

@@ -39,6 +39,7 @@ function show(req, res) {
 
 function edit(req, res) {
     Book.findById(req.params.id, function(err, book) {
+        if (!book.user.equals(req.user._id)) return res.redirect(`/books/${book._id}`);
         res.render('books/edit', { book });
     });
 }
