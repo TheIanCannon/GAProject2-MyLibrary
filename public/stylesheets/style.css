@@ -1,5 +1,5 @@
 body {
-    padding: 50px;
+    padding-left: 50px;
     font-family: 'Noto Sans';
     background: black;
     color: lightgrey;
@@ -30,13 +30,15 @@ body>nav {
     background: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 body>nav>div {
     display: grid;
     justify-items: center;
-    margin-top: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    justify-content: center;
     text-align: center;
 }
 
@@ -86,12 +88,7 @@ main {
 #landing-page {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#book-on-shelf {
-    text: lightgrey;
+    justify-content: flex-start;
 }
 
 @media only screen and ( max-width: 768px) {}
