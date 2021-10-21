@@ -12,10 +12,10 @@
         </div>
 
         <div><strong>Publishing Date: </strong>
-            <%= book.pubDate.toLocaleDateString() %>
+            <%= book.pubDate.toDateString() %>
         </div>
         <div>
-            <a id="edit-book" href="/books/<%= book._id %>/edit">Edit Details:&nbsp;<img src="https://i.imgur.com/qIjrvqm.png" height=30 width=30></a>
+            <a id="edit-book" href="/books/<%= book._id %>/edit">Edit Details&nbsp;<img src="https://i.imgur.com/qIjrvqm.png" height=30 width=30></a>
         </div>
     </section>
     <br><br>
