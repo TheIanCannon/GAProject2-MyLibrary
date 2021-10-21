@@ -90,4 +90,8 @@ main {
     align-items: center;
 }
 
+#book-on-shelf {
+    text: lightgrey;
+}
+
 @media only screen and ( max-width: 768px) {}

@@ -33,10 +33,12 @@
                         </td>
                         <td>|</td>
                         <td>
+
                             <% s.books.forEach(function(book){ %>
-                                <a href="/books/<%= book._id %>">
+                                <a href="/books/<%= book._id %>" style="color: #d2d2d2">
                                     <%= book.title %>
                                 </a>
+
                         </td>
                         <td>
                             <form id="remove-book" action="/shelves/<%=s ._id %>/books/<%= book._id %>?_method=DELETE" method="POST">
