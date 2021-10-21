@@ -86,9 +86,15 @@ main {
 }
 
 #landing-page {
+    margin-top: 85px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+
+#landing-book {
+    width: 520px;
+    height: 370px;
 }
 
 @media only screen and ( max-width: 640px) {}
