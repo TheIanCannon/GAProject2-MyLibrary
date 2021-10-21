@@ -1,26 +1,27 @@
 <%- include('../partials/header') %>
-    <h2>Books Available</h2>
+    <h2>Titles Available</h2>
     <% if (books.length > 0) { %>
         <table id="book-list">
             <thead id="book-list-header">
                 <tr>
+                    <th></th>
                     <th>Title</th>
                     <th>Author</th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 <% books.forEach(function(b) { %>
                     <tr>
                         <td>
+                            <a href="/books/<%= b._id %>"><img id="list-book" src="https://i.imgur.com/T4o6dRh.png"></a>
+                        </td>
+                        <td>
                             <%= b.title %>&nbsp;&nbsp;&nbsp;
                         </td>
                         <td>
                             <%= b.author %>&nbsp;&nbsp;&nbsp;
                         </td>
-                        <td>
-                            <a href="/books/<%= b._id %>"><img src="https://i.imgur.com/5CPYOKN.png" height=30 width=30></a>
-                        </td>
+
                     </tr>
                     <%})%>
             </tbody>

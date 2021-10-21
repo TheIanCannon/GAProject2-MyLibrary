@@ -12,37 +12,47 @@
 
 <body>
     <nav>
-        <div id="head-a">
-            <a href="/"><img src="https://i.imgur.com/KdYWfeA.png" height=30 width=30></a>
+        <div class="icon">
+            <a href="/"><img src="https://i.imgur.com/poXPFCu.png"></a>
             <br>
             <a href="/">Home</a>
         </div>
-        <div id="head-b">
-            <a href="/books"><img src="https://i.imgur.com/lcUT2qM.png" height=30 width=30></a>
+        <div class="icon">
+            <a href="/books"><img src="https://i.imgur.com/krrQNHy.png"></a>
             <br>
             <a href="/books">Browse Books</a>
         </div>
         <% if (user) { %>
-            <div id="head-c">
-                <a href="/books/new"><img src="https://i.imgur.com/0yZNN93.png" height=30 width=30></a>
+            <div class="icon">
+                <a href="/books/new"><img src="https://i.imgur.com/RUa7kwg.png"></a>
                 <br>
                 <a href="/books/new">Add a Book</a>
             </div>
-            <div id="head-d">
-                <a href="/shelves"><img src="https://i.imgur.com/iKe3Pjv.png" height=30 width=30></a>
-                <br>
-                <a href="/shelves">Your Collection</a>
+            <div class="icon">
+                <a href="/shelves"><img src="https://i.imgur.com/YZkKaZb.png" </a>
+                    <br>
+                    <a href="/shelves">Your Collection</a>
             </div>
-            <div id="head-e">
-                <a href="/logout"><img src="https://i.imgur.com/FHjYyi0.png" height=30 width=30></a>
-                <br>
-                <a href="/logout">Sign Out</a>
+            <div class="icon">
+                <a href="/logout"><img src="https://i.imgur.com/f2YDWxo.png" </a>
+                    <br>
+                    <a href="/logout">Sign Out</a>
             </div>
             <% } else { %>
-                <div id="head-f">
-                    <a href="/auth/google"><img src="https://i.imgur.com/FHjYyi0.png" height=30 width=30></a>
+                <div class="icon">
+                    <img src="https://i.imgur.com/RUa7kwg.png"></a>
                     <br>
-                    <a href="/auth/google">Sign In</a>
+                    <text color="grey">Add a Book</text>
+                </div>
+                <div class="icon">
+                    <img src="https://i.imgur.com/YZkKaZb.png" </a>
+                    <br>
+                    <text color="grey">Your Collection</text>
+                </div>
+                <div class="icon">
+                    <a href="/auth/google"><img src="https://i.imgur.com/2BUj9j7.png" </a>
+                        <br>
+                        <a href="/auth/google">Sign In</a>
                 </div>
                 <% } %>
     </nav>

@@ -15,7 +15,7 @@
             <%= book.pubDate.toLocaleDateString() %>
         </div>
         <div>
-            <a href="/books/<%= book._id %>/edit">Edit Details:&nbsp;<img src="https://i.imgur.com/CkPmJsb.png" height=30 width=30></a>
+            <a id="edit-book" href="/books/<%= book._id %>/edit">Edit Details:&nbsp;<img src="https://i.imgur.com/qIjrvqm.png" height=30 width=30></a>
         </div>
     </section>
     <br><br>
@@ -37,7 +37,7 @@
                         <% total += r.rating %>
                             <tr>
                                 <td class="review-user">
-                                    <img src="<%= r.userAvatar %>" alt="Avatar">
+                                    <img src="<%= r.userAvatar %>" id="headshot" alt="avatar">
                                     <br>
                                     <%= r.userName %>&nbsp;&nbsp;&nbsp;
                                 </td>

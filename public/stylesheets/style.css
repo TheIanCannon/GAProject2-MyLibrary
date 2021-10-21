@@ -1,10 +1,12 @@
 body {
     padding: 50px;
-    font: 14px sans-serif;
+    font-family: 'Noto Sans';
+    background: black;
+    color: lightgrey;
 }
 
 a {
-    color: #2e2694;
+    color: black;
     font-weight: bold;
 }
 
@@ -25,12 +27,10 @@ body>nav {
     left: 0;
     width: 150px;
     height: 100%;
-    background: rgb(210, 170, 130);
+    background: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 body>nav>div {
@@ -39,14 +39,25 @@ body>nav>div {
     margin-top: 10px;
 }
 
+.icon img {
+    height: 50px;
+    width: 50px;
+}
+
+#edit-book {
+    color: lightgrey;
+}
+
 #new-book-form {
     display: grid;
     grid-template-rows: 5;
     justify-content: left;
 }
 
-#book-list-header {
-    text-decoration: underline;
+#list-book {
+    margin: 5px;
+    height: 40px;
+    width: 40px;
 }
 
 #pubdate {
@@ -55,7 +66,11 @@ body>nav>div {
 }
 
 #shelf-list {
-    display: flex;
+    display: inline-block;
+}
+
+#headshot {
+    border-radius: 50%;
 }
 
 nav>img {
