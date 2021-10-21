@@ -1,71 +1,56 @@
 <%- include('../partials/header') %>
-    <h2>Your Collection</h2>
+    <h1>Your Collection</h1>
     <% if (shelves.length > 0) { %>
-        <table id="shelf-list">
-            <thead>
+        <% shelves.forEach(function(s) { %>
+            <table>
                 <tr>
-                    <th></th>
-                    <th>Shelf</th>
-                    <th>|</th>
-                    <th>Notes</th>
+                    <h4>
+                        <form action="/shelves/<%=s ._id %>?_method=DELETE" method="POST">
+                            <button id="remove-shelf" type="submit" onclick="return confirm ('Delete Shelf?');"><%= s.name %></button>
+                        </form>
+                    </h4>
                 </tr>
-                <br>
-                <tr></tr>
+                <tr>
+                    <h4>
+                        <%= s.notes %>
+                    </h4>
+                </tr>
 
-            </thead>
-            <tbody>
-                <% shelves.forEach(function(s) { %>
-                    <tr>
+                <tr>
+                    <% s.books.forEach(function(book){ %>
                         <td>
-                            <form id="remove-shelf" action="/shelves/<%=s ._id %>?_method=DELETE" method="POST">
-                                <button type="submit" onclick="return confirm ('Delete Shelf?');">X</button>
-                            </form>
-                        </td>
-                        <td>
-                            <%= s.name %>
-                        </td>
-                        <td>|</td>
-                        <td>
-                            <%= s.notes %>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-
-                            <% s.books.forEach(function(book){ %>
+                            <div id="book-on-shelf">
+                                <form action="/shelves/<%=s ._id %>/books/<%= book._id %>?_method=DELETE" method="POST">
+                                    <button id="remove-book" type="submit" onclick="return confirm('Remove book?');">x</button>
+                                </form>
+                                &nbsp;
                                 <a href="/books/<%= book._id %>" style="color: #d2d2d2">
                                     <%= book.title %>
                                 </a>
-
+                            </div>
                         </td>
-                        <td>
-                            <form id="remove-book" action="/shelves/<%=s ._id %>/books/<%= book._id %>?_method=DELETE" method="POST">
-                                <button type="submit" onclick="return confirm('Remove book?');">X</button>
-                            </form>
-                            <%})%>
-                        </td>
-                        <td>
-                            <form id="add-book" action="/shelves/<%= s._id%>" method="POST">
-                                <input name="title" placeholder="Search for a Book">
-                                <button type="submit">Add Title</button>
-                            </form>
-                        </td>
-
-                    </tr>
-                    <%})%>
-            </tbody>
-        </table>
-        <br>
-        <form id="add-shelf" action="/shelves" method="POST">
-            <input name="name" placeholder="Shelf Name">
-            <input name="notes" placeholder="Shelf Notes">
-            <button type="submit">Add Shelf</button>
-        </form>
-        <% } else {%>
-            <h2>No Shelves Available Yet</h2>
-            <form id="add-shelf" action="/shelves" method="POST">
+                        <%})%>
+                </tr>
+            </table>
+            <br>
+            <div id="title-search">
+                <form action="/shelves/<%= s._id%>" method="POST">
+                    <input name="title" placeholder="Search">
+                    <button id="add-title" type="submit">Add Title</button>
+                </form>
+            </div>
+            <br>
+            <form action="/shelves" method="POST">
                 <input name="name" placeholder="Shelf Name">
                 <input name="notes" placeholder="Shelf Notes">
-                <button type="submit">Add Shelf</button>
-                <% } %>
-                    <%- include('../partials/footer') %>
+                <button id="add-shelf" type="submit">Add Shelf</button>
+            </form>
+            <%})%>
+                <% } else {%>
+                    <h2>No Shelves Available Yet</h2>
+                    <form id="add-shelf" action="/shelves" method="POST">
+                        <input name="name" placeholder="Shelf Name">
+                        <input name="notes" placeholder="Shelf Notes">
+                        <button type="submit">Add Shelf</button>
+                        <% } %>
+                            <%- include('../partials/footer') %>

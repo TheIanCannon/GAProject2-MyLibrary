@@ -11,6 +11,11 @@ a {
     font-weight: bold;
 }
 
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
 body>nav {
     position: fixed;
     top: 0;
@@ -81,13 +86,9 @@ main {
     justify-content: stretch;
 }
 
-#shelf-list {
-    display: inline-block;
-}
-
 #headshot {
     border-radius: 10%;
-    border-width: 3px;
+    border: solid 1px lightgrey;
 }
 
 #landing-page {
@@ -99,6 +100,50 @@ main {
 #landing-book {
     width: 480px;
     height: 360px;
+}
+
+#shelf-notes {
+    text-decoration: underline;
+}
+
+#remove-shelf {
+    background-color: black;
+    color: #d2d2d2;
+}
+
+#title-search {
+    display: grid;
+    grid-template-columns: 2;
+}
+
+#book-on-shelf {
+    font-size: 8pt;
+    font-style: normal;
+    display: flex;
+    flex-direction: inline;
+}
+
+#remove-book,
+#remove-review {
+    border-radius: 25%;
+}
+
+#remove-shelf,
+#add-title,
+#add-shelf {
+    background-color: black;
+    color: lightgrey;
+    border-radius: 2.5%
+}
+
+input[type=text],
+input[type=date],
+input[name="name"],
+input[name="notes"],
+input[name="title"],
+select {
+    background-color: black;
+    color: lightgrey;
 }
 
 @media only screen and ( max-width: 768px) {}
