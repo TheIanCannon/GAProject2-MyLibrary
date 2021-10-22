@@ -165,4 +165,7 @@ select {
         justify-content: center;
         text-align: center;
     }
+    #landing-book {
+        scale: 75%;
+    }
 }
