@@ -158,6 +158,11 @@ select {
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
     body>nav>div {
-        scale: 50%;
+        display: grid;
+        justify-items: center;
+        margin-top: 0vh;
+        padding: 0vh;
+        justify-content: center;
+        text-align: center;
     }
 }
