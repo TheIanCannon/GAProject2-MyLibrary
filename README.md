@@ -14,9 +14,9 @@
 \
     1.2. CSS: Styling applied to ID, Class, and other tagged elements.\
 \
-    1.3 JS, Node, Mongoose, Express: Creation of EJS and JS files and architecture to act as views, controls, routes, etc.\
+    1.3 JS, EJS, Node, Mongoose, Express, NPM, Nodemon, Method-Override: Creation of EJS and JS files and architecture to act as views, controls, routes, etc.\
 \
-    1.4 MongoDB, Atlas, Google Developers, NPM, Nodemon, Method-Override: Hosting and management of database and JS items, open authentication, etc.\
+    1.4 MongoDB, Atlas, Google Developers: Hosting and management of database and JS items, open authentication, etc.\
 \
     1.5 OTHERS: Image hosting - imgur.com; Images - icons from flaticon.com (licensed with attribution in landing page HTML, and/or created/modified by me using Photoshop).\
 \
