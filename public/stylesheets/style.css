@@ -158,7 +158,8 @@ select {
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
     body>nav>div {
-        display: grid;
+        display: flex;
+        flex-direction: start;
         justify-items: center;
         margin-top: 0.25vh;
         padding: 0.5vh;
@@ -166,7 +167,6 @@ select {
         text-align: center;
     }
     #landing-book {
-        scale: 75%;
-        margin-left: -1vh;
+        scale: 50%;
     }
 }
