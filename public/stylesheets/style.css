@@ -167,6 +167,7 @@ select {
         text-align: center;
     }
     #landing-book {
-        scale: 50%;
+        width: 240px;
+        height: 180px;
     }
 }
