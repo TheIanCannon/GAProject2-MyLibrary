@@ -102,10 +102,6 @@ main {
     height: 360px;
 }
 
-#shelf-notes {
-    text-decoration: underline;
-}
-
 #title-search {
     display: grid;
     grid-template-columns: 2;
@@ -123,9 +119,12 @@ main {
     border-radius: 25%;
 }
 
+.content-text,
 #remove-shelf,
+#create-title,
 #add-title,
 #add-shelf,
+#add-review-form,
 #edit-book {
     background-color: black;
     color: lightgrey;
