@@ -22,22 +22,23 @@
 \
 *2. Getting Started*\
 \
+![Screenshot: Imgur Hosting](https://i.imgur.com/7bFCRS6m.png)\
 [App: Heroku](https://project-palanthas.herokuapp.com/)\
     2.1. Upon loading, the app will display the HOME page, and a vertical nav bar on its left. An unsigned visitor can visit the library or return to the Home page. They can also sign in, to add titles, review a title, or create their own collection from available titles.\
 \
-[App: Heroku](https://i.imgur.com/eZWNMWem.png)\
+![Screenshot: Heroku](https://i.imgur.com/eZWNMWem.png)\
     2.2. The BROWSE LIBRARY option allows a user, signed in or not, to view the collection of currently-available titles, as well as read any reviews attached to titles. A signed-in user is able to add or delete their own reviews, as well as update information on any title they have personally created.\
 \
-[App: Heroku](https://i.imgur.com/WXi8jeYm.png)\
-    2.3. From the Library or Your Collection link, a user can access individual titles, to get data about the book or read any other user reviews.
+![Screenshot: Heroku](https://i.imgur.com/WXi8jeYm.png)\
+    2.3. From the Library or Your Collection link, a user can access individual titles, to get data about the book or read any other user reviews.\
 \
-[App: Heroku](https://i.imgur.com/QnnQrEgm.png)\
+![Screenshot: Heroku](https://i.imgur.com/QnnQrEgm.png)\
     2.4. The ADD TITLE option allows a signed-in user to create a book to be added to the Library, by furnishing the title, author(s), genre, and publishing date.\
 \
-[App: Heroku](https://i.imgur.com/9L3MjlVm.png)\
+![Screenshot: Heroku](https://i.imgur.com/9L3MjlVm.png)\
     2.5. The EDIT DETAILS option allows a signed-in user to update the information about a given title.\
 \
-[App: Heroku](https://i.imgur.com/QHCeYGPm.png)\
+![Screenshot: Heroku](https://i.imgur.com/QHCeYGPm.png)\
     2.6. The YOUR COLLECTION option allows a signed-in user to create their own personal bookcase. They can add or remove shelves (each with its own name and note), and add or remove titles extant in the Library; these provide direct links to each book's information and reviews.\
 \
     2.7 The SIGN IN / SIGN OUT option allows the user access to all functionality available.\
