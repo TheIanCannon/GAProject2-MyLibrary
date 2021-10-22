@@ -3,14 +3,13 @@
     <% if (shelves.length > 0) { %>
         <% shelves.forEach(function(s) { %>
             <table>
-                <tr>
-                    <td>
-                        <h4>
-                            <form action="/shelves/<%=s ._id %>?_method=DELETE" method="POST"><button id="remove-shelf" type="submit" onclick="return confirm ('Delete Shelf?');"><strong>✖</strong></button>
-                                <%= s.name %>
-                            </form>
-                        </h4>
-                    </td>
+                <td>
+                    <h4>
+                        <form action="/shelves/<%=s ._id %>?_method=DELETE" method="POST"><button id="remove-shelf" type="submit" onclick="return confirm ('Delete Shelf?');"><strong>✖</strong></button>
+                            <%= s.name %>
+                        </form>
+                    </h4>
+                </td>
             </table>
             <h6>
                 <%= s.notes %>

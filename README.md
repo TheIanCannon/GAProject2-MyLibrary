@@ -2,7 +2,7 @@
 \
 ![Screenshot: Imgur Hosting](https://i.imgur.com/7bFCRS6m.png)\
 \
-    Named for a fictional city with an arcane library at its heart, this app allows the user to add to a collection of titles, and create reviews and collections—and you don't even need an acceptance letter to Hogwart's!\
+    Named for a fictional city holding a great library, this app works as a reading list and book tracker, allowing the user to work with a selection of titles, and create reviews and collections of favored texts.\
 \
 *1. Technologies Used*\
 \
