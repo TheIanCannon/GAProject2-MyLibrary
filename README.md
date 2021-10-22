@@ -1,11 +1,3 @@
-https://trello.com/b/ecZR13kn/project-palanthas
-
-https://project-palanthas.herokuapp.com/
-
-LANDING PAGE https://i.imgur.com/7bFCRS6m.png
-
-
-
 **GENERAL ASSEMBLY PROJECT 2 : Palanthas**\
 \
 ![Screenshot: Imgur Hosting](https://i.imgur.com/7bFCRS6m.png)\
@@ -26,7 +18,7 @@ LANDING PAGE https://i.imgur.com/7bFCRS6m.png
 \
     1.4 MongoDB, Atlas, Google Developers, NPM, Nodemon, Method-Override: Hosting and management of database and JS items, open authentication, etc.\
 \
-    1.5 OTHERS: Image hosting - imgur.com; Images - free clip art, licensed (with attribution in landing page HTML), and/or created/modified by me using Photoshop.\
+    1.5 OTHERS: Image hosting - imgur.com; Images - icons from flaticon.com (licensed with attribution in landing page HTML, and/or created/modified by me using Photoshop).\
 \
 *2. Getting Started*\
 \
@@ -52,13 +44,15 @@ LANDING PAGE https://i.imgur.com/7bFCRS6m.png
 \
 *3. Next Steps*\
 \
-    3.1. Expanded tracking options: Counters for "rounds played" and/or "amount won".\
+    3.1. Add cover image to each title created.\
 \
-    3.1.1. Digit-by-digit counting-out of winnings adding to credits.\
+    3.2. Information on authors (especially with multiple titles).\
 \
-    3.1. More realistically "animated" reel gif (vertical slide effect?) or animated lever movement; animated wager payout?\
+    3.2. Reviews for authors.\
 \
-    3.2. Flashing lights "behind" the reels, or other simple visuals to decorate the page (similar to realspace or online slot machines of various types).\
+    3.3. Add guest-book comment space for unsigned visitors.\
 \
-    3.4. BIG TICKET: Expanded control options i.e. "nudge" switches for each reel (spending extra wager for each), multiple paylines (horizontal/diagonal).
+    3.4. BIG TICKET: Substitute API (from Library of Congress?) in place of data entry on titles/authors.\
+\
+    3.5. REALLY BIG TICKET: Connect users with 3+ titles in common.
     
