@@ -158,8 +158,8 @@ select {
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
     body>nav>div {
-        display: flex;
-        flex-direction: start column;
+        display: grid;
+        grid-columns: 1;
         justify-items: center;
         margin-top: 0.25vh;
         padding: 0.5vh;
