@@ -8,7 +8,7 @@
 \
 ![Wireframe: Imgur Hosting](https://i.imgur.com/rBsUWK8m.jpg)\
 ![ERD: Imgur Hosting](https://i.imgur.com/t7qZjB7m.png)\
-![Development Board: Trello Hosting](https://trello.com/b/ecZR13kn/project-palanthas)\
+[Development Board: Trello Hosting](https://trello.com/b/ecZR13kn/project-palanthas)\
 \
     1.1. HTML: Construction of layouts of each page view.\
 \
