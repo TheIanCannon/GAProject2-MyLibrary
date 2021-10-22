@@ -106,11 +106,6 @@ main {
     text-decoration: underline;
 }
 
-#remove-shelf {
-    background-color: black;
-    color: #d2d2d2;
-}
-
 #title-search {
     display: grid;
     grid-template-columns: 2;
@@ -130,7 +125,8 @@ main {
 
 #remove-shelf,
 #add-title,
-#add-shelf {
+#add-shelf,
+#edit-book {
     background-color: black;
     color: lightgrey;
     border-radius: 2.5%

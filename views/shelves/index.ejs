@@ -11,9 +11,9 @@
                     </h4>
                 </tr>
                 <tr>
-                    <h4>
+                    <h5>
                         <%= s.notes %>
-                    </h4>
+                    </h5>
                 </tr>
 
                 <tr>
@@ -33,24 +33,30 @@
                 </tr>
             </table>
             <br>
-            <div id="title-search">
-                <form action="/shelves/<%= s._id%>" method="POST">
-                    <input name="title" placeholder="Search">
-                    <button id="add-title" type="submit">Add Title</button>
-                </form>
+            <h6>
+                <div id="title-search">
+                    <form action="/shelves/<%= s._id%>" method="POST">
+                        <input name="title" placeholder="Search">
+                        <button id="add-title" type="submit">Add Title</button>
+                    </form>
+            </h6>
             </div>
             <br>
-            <form action="/shelves" method="POST">
-                <input name="name" placeholder="Shelf Name">
-                <input name="notes" placeholder="Shelf Notes">
-                <button id="add-shelf" type="submit">Add Shelf</button>
-            </form>
             <%})%>
-                <% } else {%>
-                    <h2>No Shelves Available Yet</h2>
-                    <form id="add-shelf" action="/shelves" method="POST">
+                <h6>
+                    <form action="/shelves" method="POST">
                         <input name="name" placeholder="Shelf Name">
                         <input name="notes" placeholder="Shelf Notes">
-                        <button type="submit">Add Shelf</button>
-                        <% } %>
-                            <%- include('../partials/footer') %>
+                        <button id="add-shelf" type="submit">Add Shelf</button>
+                    </form>
+                </h6>
+                <% } else {%>
+                    <h2>No Shelves Available Yet</h2>
+                    <h6>
+                        <form id="add-shelf" action="/shelves" method="POST">
+                            <input name="name" placeholder="Shelf Name">
+                            <input name="notes" placeholder="Shelf Notes">
+                            <button type="submit">Add Shelf</button>
+                    </h6>
+                    <% } %>
+                        <%- include('../partials/footer') %>
