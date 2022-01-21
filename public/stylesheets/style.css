@@ -157,6 +157,11 @@ select {
     color: lightgrey;
 }
 
+#home, #books, #new, #shelves, #logout, #add, #collection, #sign-in > a:hover{
+    background: #fff,
+    color: #000;
+}
+
 @media only screen and (min-width: 200px) and (max-width: 767px) {
     body>nav>div {
         display: grid;
