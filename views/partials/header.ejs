@@ -22,44 +22,44 @@ Flaticon / th studio: "Sign In", "Sign Out" icons
 
 <body>
     <nav>
-        <div class="icon">
+        <div class="icon" id="home">
             <a href="/"><img src="https://i.imgur.com/poXPFCu.png"></a>
             <br>
             <a href="/">Home</a>
         </div>
-        <div class="icon">
+        <div class="icon" id="books">
             <a href="/books"><img src="https://i.imgur.com/krrQNHy.png"></a>
             <br>
             <a href="/books">Browse<br>Library</a>
         </div>
         <% if (user) { %>
-            <div class="icon">
+            <div class="icon" id="new">
                 <a href="/books/new"><img src="https://i.imgur.com/RUa7kwg.png"></a>
                 <br>
                 <a href="/books/new">Add<br>Title</a>
             </div>
-            <div class="icon">
+            <div class="icon" id="shelves">
                 <a href="/shelves"><img src="https://i.imgur.com/YZkKaZb.png" </a>
                     <br>
                     <a href="/shelves">Manage<br>Collection</a>
             </div>
-            <div class="icon">
+            <div class="icon" id="logout">
                 <a href="/logout"><img src="https://i.imgur.com/f2YDWxo.png" </a>
                     <br>
                     <a href="/logout">Sign<br> Out</a>
             </div>
             <% } else { %>
-                <div class="icon">
+                <div class="icon" id="add">
                     <img src="https://i.imgur.com/RUa7kwg.png"></a>
                     <br>
                     <text color="grey">Add<br>Title</text>
                 </div>
-                <div class="icon">
+                <div class="icon" id="collection">
                     <img src="https://i.imgur.com/YZkKaZb.png" </a>
                     <br>
                     <text color="grey">Your<br> Collection</text>
                 </div>
-                <div class="icon">
+                <div class="icon" id="sign-in">
                     <a href="/auth/google"><img src="https://i.imgur.com/2BUj9j7.png" </a>
                         <br>
                         <a href="/auth/google">Sign<br> In</a>
