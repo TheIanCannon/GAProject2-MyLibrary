@@ -181,4 +181,12 @@ select {
       left: 1%;
       top: 1%;
     }
+    .navbar{
+      font-size: 75%;
+      width: 75px;
+    }
+    .navbar>img{
+      height: 75%;
+      width: 75%;
+    }
 }
