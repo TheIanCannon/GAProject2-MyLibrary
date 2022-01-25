@@ -163,17 +163,20 @@ select {
 }
 
 @media only screen and (min-width: 400px) and (max-width: 767px) {
-    body>nav>div {
-        display: grid;
-        grid-template-columns: 1;
-        justify-items: center;
-        margin-top: 0.25vh;
-        padding: 0.5vh;
-        justify-content: center;
-        text-align: center;
+		  body>nav>div {
+						display: grid;
+						grid-template-columns: 1;
+						justify-items: center;
+						margin-top: 0.25vh;
+						padding: 0.5vh;
+						justify-content: center;
+						text-align: center;
     }
     #landing-book {
-        width: 200px;
-        height: 150px;
+						width: 200px;
+						height: 150px;
+    }
+    #landing-page {
+      font-size: 50%;
     }
 }
