@@ -178,5 +178,7 @@ select {
     }
     #landing-page {
       font-size: 50%;
+      left: 1%;
+      top: 1%;
     }
 }
