@@ -162,7 +162,7 @@ select {
     color: #000;
 }
 
-@media only screen and (min-width: 400px) and (max-width: 767px) {
+@media only screen and (min-width: 300px) and (max-width: 768px) {
 		  body>nav>div {
 						display: grid;
 						grid-template-columns: 1;
