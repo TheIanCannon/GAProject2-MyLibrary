@@ -162,7 +162,7 @@ select {
     color: #000;
 }
 
-@media only screen and (min-width: 200px) and (max-width: 767px) {
+@media only screen and (min-width: 400px) and (max-width: 767px) {
     body>nav>div {
         display: grid;
         grid-template-columns: 1;
@@ -173,7 +173,7 @@ select {
         text-align: center;
     }
     #landing-book {
-        width: 240px;
-        height: 180px;
+        width: 200px;
+        height: 150px;
     }
 }
