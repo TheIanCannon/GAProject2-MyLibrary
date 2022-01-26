@@ -167,8 +167,8 @@ select {
 						display: grid;
 						grid-template-columns: 1;
 						justify-items: center;
-						margin-top: 0.25vh;
-						padding: 0.5vh;
+						margin-top: 0.125vh;
+						padding: 0.25vh;
 						justify-content: center;
 						text-align: center;
     }
