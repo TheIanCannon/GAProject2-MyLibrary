@@ -162,7 +162,7 @@ select {
 }
 
 .navbar {
-  position: absolute !important;
+  position: fixed !important;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
