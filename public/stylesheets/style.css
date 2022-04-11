@@ -25,7 +25,6 @@ body>nav {
     background: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
 }
 
 body>nav>div {
@@ -162,7 +161,14 @@ select {
     color: #000;
 }
 
-@media only screen and (min-width: 400px) and (max-width: 767px) {
+.navbar {  
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 400px) and (max-width: 768px) {
     body>nav>div {
         display: grid;
         grid-template-columns: 1;
