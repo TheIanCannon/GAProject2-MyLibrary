@@ -161,12 +161,14 @@ select {
     color: #000;
 }
 
-.navbar {  
+.navbar {
+  position: absolute;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-}
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 
 @media only screen and (min-width: 400px) and (max-width: 768px) {
     body>nav>div {
